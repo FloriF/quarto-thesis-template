@@ -1,0 +1,44 @@
+% Taken from here and adapted:
+% https://cameronpatrick.com/post/2023/07/quarto-thesis-formatting/#easy-pdf-tweaks-only-yaml-needed
+
+$if(title)$
+{
+\centering
+\huge Eberhard Karls Universität Tübingen \\
+\Large Faculty of Science \\
+\Large Cognitive Neuroscience \\
+\vspace{10ex}
+\huge Master Thesis Cognitive Science\\
+\vspace{3ex}
+\huge\textbf{$title$}\\
+\huge $subtitle$\\
+\vspace{3ex}
+$for(by-author)$
+\begin{center}
+\Large $by-author.name.literal$\\
+\large ORCID: \href{https://orcid.org/$by-author.orcid$}{$by-author.orcid$}
+\end{center}
+$endfor$
+\vspace{3ex}
+\Large $date$\\
+\vspace{10ex}
+\Large\textbf{Reviewers}\\
+\vspace{3ex}
+\parbox{0.5\textwidth}{
+	\begin{center}
+		{\Large Dr. X}\\
+		\large Department\\
+		Faculty for Science\\
+		Universität Tübingen
+	\end{center}}
+\hfill
+\parbox{0.5\textwidth}{
+	\begin{center}
+  		{\Large Name 2nd Reviewer}\\
+  		\large Department\\
+  		Faculty for Stuff\\
+  		University of Tübingen
+  	\end{center}
+ }
+}
+$endif$
